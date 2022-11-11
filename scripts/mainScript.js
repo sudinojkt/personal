@@ -1,5 +1,5 @@
 let icons = L.icon({
-    iconUrl: '../images/food.png',
+    iconUrl: 'images/food.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40]
@@ -8,7 +8,7 @@ let icons = L.icon({
 ////////////////////////////////////////////////////////////////////////////////////////////////
 window.addEventListener("DOMContentLoaded", async function () {
     function init() {
-        
+
         let map = initMap();
 
         let searchResultLayer = L.markerClusterGroup();
