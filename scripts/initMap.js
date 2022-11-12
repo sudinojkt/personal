@@ -1,6 +1,6 @@
 function initMap() {
-
-    let map = L.map('map').setView([1.3521, 103.8198], 12);
+    
+    let map = L.map('map').setView([1.3521, 103.8198], 4);
 
     // tile layer
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -13,23 +13,18 @@ function initMap() {
     }).addTo(map);
 
     //add maker and popup
-        var marker = L.marker([1.3521, 103.8198]).addTo(map);
-        marker.bindPopup("<b>Hello world!</b><br>Greetings from Singapore").openPopup();
+    var marker = L.marker([1.3521, 103.8198]).addTo(map);
+    marker.bindPopup("<b>Hello world!</b><br>Greetings from Singapore.").openPopup();
 
-    ///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Layer control 
-    let searchResultLayer = L.markerClusterGroup();
-    searchResultLayer.addTo(map);
-
-    let dummyLayer = L.markerClusterGroup();
-    // dummyLayer.addTo(map)
-
-    let baseLayers = {
-        'Food': searchResultLayer,
-        'Dummy': dummyLayer,
+    //add LatLng popup
+    var popup = L.popup();
+    function onMapClick(e) {
+        popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
     }
-    L.control.layers(baseLayers, {}).addTo(map);
+    map.on('click', onMapClick);
+
     return map;
-    }
-
+}
