@@ -1,5 +1,5 @@
 #map {
-    height:90vh;
+    height:92vh;
 }
 
 #map-container {
@@ -55,7 +55,19 @@
         visibility: hidden;
         position: center; 
     }
+}
 
+#searchTerms {
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    background-color:yellow;
+}
+
+#btnSearch{
+    background-color: black;
+    color: aliceblue
+    ;
 }
 
 /* leaflet */ 
