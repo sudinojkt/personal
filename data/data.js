@@ -1,6 +1,7 @@
+window.addEventListener("DOMContentLoaded", async function () {
 
 const API_BASE_URL="https://api.foursquare.com/v3/places/";
-const API_KEY="fsq3QDBN0pfxk64qwMqNNvXhhDwbZOfIZqUEa4L/YjiNATQ=";
+const API_KEY = "fsq3QDBN0pfxk64qwMqNNvXhhDwbZOfIZqUEa4L/YjiNATQ=";
 
 const headers = {
     "Accept": "application/json",  
@@ -22,3 +23,5 @@ async function getPhoto(fsq_id) {
         'headers': headers
     });
     return response.data;  }
+
+});

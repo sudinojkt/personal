@@ -28,42 +28,25 @@
 <!--body style="background-color:#0288D1">-->
 <body>
 
-<!-- Off Canvas -->
-  <!--button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Menu</button>-->  
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Welcome!</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div> Info </div>
-      <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          Menu
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-<!-- Off Canvas -->
-
 <!-- Food Search -->
-  <div id="map-container">
-    <button id="btnToggleSearch">Search Toggle</button>
-    <div id="map"></div>
-    <div id="search-container">
-      <input type="text" id="searchTerms"/>
-      <button id="btnSearch">Search</button>
-      <div id="results"></div>
-    </div>
+<div id="map-container">
+  <button id="btnToggleSearch">Search Toggle</button>
+  <div id="map"></div>
+    <div id="results"></div>
+    <!--<div class="fixed-bottom"><input type="text" id="searchTerms"/><button id="btnSearch">Search</button></div>-->
   </div>
-         
-        <!---
-            <div class="dropdown">
+
+<!-- Off Canvas --> 
+<div class="div-footer">
+    <footer class="footer">      
+        <p style="text-align: center;">
+        <span><input placeholder="search here.." type="text" id="searchTerms"/><button id="btnSearch">search</button></span>
+        </p>      
+    </footer>
+</div>
+<!-- Off Canvas -->
+            
+           <!--<div class="dropdown">
                 <label for="foods"> </label>
                 <select name="Foods" id="foods" class="btnDropdown" style="text-align:left">
                     <option type="food" value="0" class="empty" name="food" style="visibility: hidden;">Food Seletcion
@@ -79,11 +62,9 @@
                     <option type="food" value="13340" class="localFood" name="food">8. Singaporean Restuarants</option>
                     <option type="food" value="0" class="empty" name="food" style="visibility: hidden;"></option>
                 </select>
-
                 <div id="results"></div>
             </div>
-        </div>
--->
+        </div>-->
 <!-- Food Search -->
 
     <!-- Bootstrap 5.2 -->

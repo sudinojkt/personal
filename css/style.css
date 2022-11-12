@@ -1,5 +1,5 @@
 #map {
-    height:100vh;
+    height:90vh;
 }
 
 #map-container {
@@ -56,36 +56,7 @@
         position: center; 
     }
 
-    /*
-    #searchTerms {
-        min-width: 300px;
-        height: 50px;
-        margin-top: 1px;
-        position: center;
-        background-origin: padding-box;
-    }
-
-    .btnSearch {
-        background-color:#9deafa;
-        background-origin: padding-box;
-        visibility: hidden;
-    }
-    */
 }
-
-.btnDropdown {
-    background-color: rgb(0, 195, 255, 0.9); 
-    font-weight: bold;
-    font-size: 18px;
-    position: right;
-    color: white;
-    border: 5px solid;
-    border-color: black;
-    padding: 10px;
-    box-shadow: 4px;
-    width: 240px;   
-} 
-
 
 /* leaflet */ 
 .popup {
@@ -119,6 +90,3 @@
     font-size: small;
 }
 
-.footer {
-    max-height: 10px;
-}
