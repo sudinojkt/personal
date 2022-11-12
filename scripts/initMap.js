@@ -1,5 +1,16 @@
-function initMap() {
-    
+//add customise icon
+var myIcon = L.icon({
+    iconUrl: 'my-icon.png',
+    iconSize: [38, 95],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: 'my-icon-shadow.png',
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////
+function initMap() {    
     let map = L.map('map').setView([1.3521, 103.8198], 4);
 
     // tile layer
@@ -25,6 +36,9 @@ function initMap() {
         .openOn(map);
     }
     map.on('click', onMapClick);
+
+    //add customise icon
+    //L.marker([1.3521, 103.8198], {icon: myIcon}).addTo(map);
 
     return map;
 }

@@ -103,3 +103,12 @@
     font-size: small;
 }
 
+.leaflet-marker-icon leaflet-zoom-animated leaflet-interactive {
+    margin-left: -12px; 
+    margin-top: -41px; 
+    width: 25px; 
+    height: 41px; 
+    transform: translate3d(608px, 262px, 0px); 
+    z-index: 262;
+    outline:none;
+}
