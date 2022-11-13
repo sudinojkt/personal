@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
-function initMap() {    
-    let map = L.map('map').setView([1.3521, 103.8198], 4);
+function initMap() {   
 
+    let map = L.map('map').setView([1.3521, 103.8198], 12);
+    
     // tile layer
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -13,8 +14,8 @@ function initMap() {
     }).addTo(map);
 
     //add maker and popup
-    var marker = L.marker([1.3521, 103.8198]).addTo(map);
-    marker.bindPopup("<b>Hello world!</b><br>Greetings from Singapore.").openPopup();
+    // var marker = L.marker([1.3521, 103.8198]).addTo(map);
+    // marker.bindPopup("<b>Hello world!</b><br>Greetings from Singapore.").openPopup();
 
     //add LatLng popup
     var popup = L.popup();
@@ -26,9 +27,27 @@ function initMap() {
     }
     map.on('click', onMapClick);
 
-    //add customise icon
-    
+/////////////////////////////////////////////////////////////////////////////////////////  
+    let searchResultLayer = L.markerClusterGroup();
+    //searchResultLayer.addTo(map);
+///////////////////////////////////////////////////////////////////////////////
+    let carparkLayer = L.markerClusterGroup();
+    // carparkLayer.addTo(map)
+///////////////////////////////////////////////////////////////////////////////
+    let taxiLayer = L.markerClusterGroup();  
+    // taxiLayer.addTo(map)
+///////////////////////////////////////////////////////////////////////////////
+    let weatherLayer = L.markerClusterGroup();  
+        weatherLayer.addTo(map)
+///////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////////////////////   
+    let baseLayers = {
+        'Food': searchResultLayer,
+        'Carpark': carparkLayer,
+        'Taxi': taxiLayer,
+        'Weather': weatherLayer,
+    }
+
+    L.control.layers(baseLayers, {}).addTo(map);
     return map;
 }

@@ -5,9 +5,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
 
 
-
-
-        
+       
 ////////////////////////////////////////////////////////////////////////////////////////////   
 //         let searchResultLayer = L.markerClusterGroup();
 //         searchResultLayer.addTo(map);
